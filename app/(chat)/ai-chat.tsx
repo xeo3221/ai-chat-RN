@@ -60,6 +60,7 @@ export default function Chat() {
   const [error, setError] = useState<Error | null>(null);
   const [chatRoom, setChatRoom] = useState<AIChatRoom | null>(null);
   const headerHeight = Platform.OS === "ios" ? useHeaderHeight() : 0;
+  const [debugInfo, setDebugInfo] = useState<string>("");
 
   useEffect(() => {
     if (user) {
@@ -193,18 +194,27 @@ export default function Chat() {
       setMessageContent("");
       setIsLoading(true);
 
-      const response = await expoFetch(generateAPIUrl("/api/chat"), {
+      const apiUrl = generateAPIUrl("/api/chat");
+      setDebugInfo(`Trying URL: ${apiUrl}`);
+
+      const response = await expoFetch(apiUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          messages: [...messages, userMessage],
+          messages: [...messages, userMessage].map((msg) => ({
+            role: msg.role,
+            content: msg.content,
+          })),
         }),
       });
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        const errorText = await response.text();
+        throw new Error(
+          `HTTP error! status: ${response.status}\nURL: ${apiUrl}\nResponse: ${errorText}`
+        );
       }
 
       const data = await response.json();
@@ -230,6 +240,7 @@ export default function Chat() {
       setError(
         error instanceof Error ? error : new Error("Unknown error occurred")
       );
+      setDebugInfo(error instanceof Error ? error.message : "Unknown error");
     } finally {
       setIsLoading(false);
     }
@@ -237,12 +248,32 @@ export default function Chat() {
 
   if (error) {
     return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <View
+        style={{
+          flex: 1,
+          justifyContent: "center",
+          alignItems: "center",
+          padding: 20,
+        }}
+      >
         <Text style={{ color: "red", textAlign: "center", marginBottom: 10 }}>
           {error.message}
         </Text>
+        <Text
+          style={{
+            color: "gray",
+            textAlign: "center",
+            marginBottom: 20,
+            fontSize: 12,
+          }}
+        >
+          Debug info: {debugInfo}
+        </Text>
         <Pressable
-          onPress={() => setError(null)}
+          onPress={() => {
+            setError(null);
+            setDebugInfo("");
+          }}
           style={{
             padding: 10,
             backgroundColor: Primary,

@@ -8,10 +8,22 @@ export const generateAPIUrl = (relativePath: string) => {
     const localUrl =
       Constants.experienceUrl?.replace("exp://", "http://") ||
       "http://localhost:8081";
+    console.log("Development URL:", localUrl + path);
     return localUrl + path;
   }
 
-  // In production (Expo Go), use exp:// format
-  const experienceUrl = Constants.experienceUrl || "exp://localhost:8081";
-  return experienceUrl + path;
+  // In Expo Go (production)
+  const projectId = Constants.expoConfig?.extra?.eas?.projectId;
+  if (projectId) {
+    // Get the experience URL without the protocol
+    const expUrl = Constants.experienceUrl?.split("//")[1] || "";
+    if (expUrl.includes("exp.host")) {
+      // If it's running on Expo's servers
+      return `https://exp.host/@xeo3221/ai-chat${path}`;
+    }
+  }
+
+  // Fallback
+  console.log("Fallback URL:", "http://localhost:8081" + path);
+  return "http://localhost:8081" + path;
 };
