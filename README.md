@@ -2,6 +2,9 @@
 
 A modern mobile chat application built with React Native, Expo, and Appwrite. The app offers a seamless experience for interacting with AI using AI SDK, featuring a clean and intuitive interface, real-time chat functionality, and robust message management.
 
+## Expo GO Demo
+![Capture-2025-04-18-194335](https://github.com/user-attachments/assets/f252d401-c10e-472b-926d-7e87ee7fc053)
+
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -103,6 +106,24 @@ npx expo start
 yarn expo start
 ```
 
+## 🎨 Design
+
+The application features a modern, clean design with:
+
+- Minimalist interface
+- Responsive layout
+- Smooth transitions
+- Dark mode
+- Custom UI components
+![IMG_5504](https://github.com/user-attachments/assets/b78f4c25-afd5-4b60-b1b5-e1a17e931a1e)
+![IMG_5505](https://github.com/user-attachments/assets/2da5bb6f-1635-4b86-a7b8-9548659874ac)
+![IMG_5507](https://github.com/user-attachments/assets/d836a409-3855-449d-b308-0457b0aafa1c)
+![IMG_5509](https://github.com/user-attachments/assets/4d4e3bbb-23d2-4c66-ad3a-a94ec02f427c)
+![IMG_5506](https://github.com/user-attachments/assets/29e5abb7-8b0f-47e4-84e2-a072b10346f2)
+![IMG_5511](https://github.com/user-attachments/assets/6b679ddb-2baa-421a-9e12-4e018d85f8bb)
+
+  
+
 ## 🌟 Features
 
 - **Chat Interface**
@@ -110,7 +131,7 @@ yarn expo start
   - Clean and intuitive chat interface
   - Real-time message updates
   - Message history management
-  - Dark/light mode support
+  - Dark mode
 
 - **Authentication**
 
@@ -139,16 +160,6 @@ yarn expo start
 - `generate-api-url.ts`: API endpoint generation utilities
 - `mock-data.ts`: Development mock data
 - `types.ts`: TypeScript type definitions
-
-## 🎨 Design
-
-The application features a modern, clean design with:
-
-- Minimalist interface
-- Responsive layout
-- Smooth transitions
-- Dark/light mode support
-- Custom UI components
 
 ## 🔮 Future Improvements
 
