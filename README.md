@@ -1,50 +1,177 @@
-# Welcome to your Expo app 👋
+# AI Chat
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A modern mobile chat application built with React Native, Expo, and Appwrite. The app offers a seamless experience for interacting with AI, featuring a clean and intuitive interface, real-time chat functionality, and robust message management.
 
-## Get started
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#-tech-stack">Tech Stack</a>
+    </li>
+    <li>
+      <a href="#-features">Features</a>
+    </li>
+    <li>
+      <a href="#-getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#-project-structure">Project Structure</a></li>
+    <li><a href="#-key-components">Key Components</a></li>
+    <li><a href="#-utils">Utils</a></li>
+    <li><a href="#-design">Design</a></li>
+    <li><a href="#-future-improvements">Future Improvements</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
-1. Install dependencies
+## 🚀 Tech Stack
 
-   ```bash
-   npm install
-   ```
+- **Framework**: React Native with Expo
+- **Language**: TypeScript
+- **Backend**: Appwrite
 
-2. Start the app
+## 🛠 Getting Started
 
-   ```bash
-    npx expo start
-   ```
+### Prerequisites
 
-In the output, you'll find options to open the app in a
+- Node.js
+- npm or yarn
+- Expo CLI
+  ```sh
+  npm install -g expo-cli
+  ```
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### Installation
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+1. **Clone the repository**
 
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```sh
+git clone https://github.com/your-username/ai-chat.git
+cd ai-chat
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. **Install dependencies**
 
-## Learn more
+```sh
+npm install
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+- or
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```sh
+yarn install
+```
 
-## Join the community
+3. **Set up environment variables**
 
-Join our community of developers creating universal apps.
+```sh
+cp .env.example .env.local
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```
+# CLERK
+EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key_here
+
+# APPWRITE
+EXPO_PUBLIC_APPWRITE_APP_ID=your_appwrite_app_id_here
+EXPO_PUBLIC_APPWRITE_DATABASE_ID=your_appwrite_database_id_here
+
+# API
+EXPO_PUBLIC_API_BASE_URL=your_api_base_url_here
+
+# OPENAI
+OPENAI_API_KEY=your_openai_api_key_here
+
+# AI PROVIDERS
+ANTHROPIC_API_KEY=your_anthropic_api_key_here
+GOOGLE_GENERATIVE_AI_API_KEY=your_google_generative_ai_api_key_here
+
+```
+
+4. **Start the development server**
+
+```sh
+npx expo start
+```
+
+- or
+
+```sh
+yarn expo start
+```
+
+## 🌟 Features
+
+- **Chat Interface**
+
+  - Clean and intuitive chat interface
+  - Real-time message updates
+  - Message history management
+  - Dark/light mode support
+
+- **Authentication**
+
+  - Secure user authentication
+  - Session management
+  - Protected routes
+
+- **User Experience**
+  - Responsive design
+  - Smooth animations
+  - Offline support
+
+## 📦 Key Components
+
+- `Button`: Custom button component with various styles and states
+- `Input`: Custom input component with validation support
+- `Text`: Custom text component with typography styles
+- `IconSymbol`: Custom icon component for consistent iconography
+
+## 🔧 Utils
+
+- `appwrite.ts`: Appwrite client configuration and API methods
+- `cache.ts`: Local storage and caching utilities
+- `colors.ts`: Color palette and theme constants
+- `date.ts`: Date formatting and manipulation utilities
+- `generate-api-url.ts`: API endpoint generation utilities
+- `mock-data.ts`: Development mock data
+- `types.ts`: TypeScript type definitions
+
+## 🎨 Design
+
+The application features a modern, clean design with:
+
+- Minimalist interface
+- Responsive layout
+- Smooth transitions
+- Dark/light mode support
+- Custom UI components
+
+## 🔮 Future Improvements
+
+- **Enhanced AI Features**
+
+  - Multiple AI model support
+  - Custom AI model integration
+  - Advanced context management
+
+- **User Features**
+
+  - Profile customization
+  - Chat history export
+  - Custom AI settings
+
+- **Performance Improvements**
+  - Message caching
+  - Optimized rendering
+  - Better state management
+
+## Acknowledgments
+
+- [React Native](https://reactnative.dev/)
+- [Expo](https://expo.dev/)
+- [Appwrite](https://appwrite.io/)
+- [TypeScript](https://www.typescriptlang.org/)

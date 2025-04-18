@@ -184,7 +184,11 @@ export default function AIChatSettings() {
           {isLoading ? (
             <ActivityIndicator color={Red} />
           ) : (
-            <IconSymbol name="chevron.right" color={Red} />
+            <IconSymbol
+              name="plus"
+              color={Red}
+              style={{ transform: [{ rotate: "45deg" }] }}
+            />
           )}
         </Pressable>
       </View>

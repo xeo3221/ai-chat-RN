@@ -47,9 +47,13 @@ export default function Chat() {
     const channel = `databases.${appwriteConfig.db}.collections.${appwriteConfig.col.chatRooms}.documents.${chatId}`;
 
     const unsubscribe = client.subscribe(channel, () => {
-      console.log("chat room updated");
-      getChatRoom();
-      getMessages();
+      try {
+        console.log("chat room updated");
+        getChatRoom();
+        getMessages();
+      } catch (error) {
+        console.error("Error in realtime subscription:", error);
+      }
     });
     return () => unsubscribe();
   }, [chatId]);

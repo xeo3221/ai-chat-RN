@@ -71,8 +71,12 @@ export default function Chat() {
     const channel = `databases.${appwriteConfig.db}.collections.${appwriteConfig.col.aiMessages}.documents`;
 
     const unsubscribe = client.subscribe(channel, () => {
-      console.log("AI messages updated");
-      loadMessages();
+      try {
+        console.log("AI messages updated");
+        loadMessages();
+      } catch (error) {
+        console.error("Error in AI messages subscription:", error);
+      }
     });
     return () => unsubscribe();
   }, [chatId]);
@@ -81,8 +85,12 @@ export default function Chat() {
     const channel = `databases.${appwriteConfig.db}.collections.${appwriteConfig.col.aiChatRooms}.documents.${chatId}`;
 
     const unsubscribe = client.subscribe(channel, () => {
-      console.log("AI chat room updated");
-      getChatRoom();
+      try {
+        console.log("AI chat room updated");
+        getChatRoom();
+      } catch (error) {
+        console.error("Error in AI chat room subscription:", error);
+      }
     });
     return () => unsubscribe();
   }, [chatId]);
