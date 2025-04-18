@@ -116,6 +116,7 @@ The application features a modern, clean design with:
 - Smooth transitions
 - Dark mode
 - Custom UI components
+
   <img src="https://github.com/user-attachments/assets/b78f4c25-afd5-4b60-b1b5-e1a17e931a1e" width="300" height="auto" />
   <img src="https://github.com/user-attachments/assets/2da5bb6f-1635-4b86-a7b8-9548659874ac" width="300" height="auto" />
   <img src="https://github.com/user-attachments/assets/d836a409-3855-449d-b308-0457b0aafa1c" width="300" height="auto" />
