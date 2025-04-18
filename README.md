@@ -4,7 +4,7 @@ A modern mobile chat application built with React Native, Expo, and Appwrite. Th
 
 ## Expo GO Demo
 
-![Capture-2025-04-18-194335](https://github.com/user-attachments/assets/f252d401-c10e-472b-926d-7e87ee7fc053?width=300)
+<img src="https://github.com/user-attachments/assets/f252d401-c10e-472b-926d-7e87ee7fc053" width="300" height="auto" />
 
 <details>
   <summary>Table of Contents</summary>
@@ -116,12 +116,12 @@ The application features a modern, clean design with:
 - Smooth transitions
 - Dark mode
 - Custom UI components
-  ![IMG_5504](https://github.com/user-attachments/assets/b78f4c25-afd5-4b60-b1b5-e1a17e931a1e?width=300)
-  ![IMG_5505](https://github.com/user-attachments/assets/2da5bb6f-1635-4b86-a7b8-9548659874ac?width=300)
-  ![IMG_5507](https://github.com/user-attachments/assets/d836a409-3855-449d-b308-0457b0aafa1c?width=300)
-  ![IMG_5509](https://github.com/user-attachments/assets/4d4e3bbb-23d2-4c66-ad3a-a94ec02f427c?width=300)
-  ![IMG_5506](https://github.com/user-attachments/assets/29e5abb7-8b0f-47e4-84e2-a072b10346f2?width=300)
-  ![IMG_5511](https://github.com/user-attachments/assets/6b679ddb-2baa-421a-9e12-4e018d85f8bb?width=300)
+  <img src="https://github.com/user-attachments/assets/b78f4c25-afd5-4b60-b1b5-e1a17e931a1e" width="300" height="auto" />
+  <img src="https://github.com/user-attachments/assets/2da5bb6f-1635-4b86-a7b8-9548659874ac" width="300" height="auto" />
+  <img src="https://github.com/user-attachments/assets/d836a409-3855-449d-b308-0457b0aafa1c" width="300" height="auto" />
+  <img src="https://github.com/user-attachments/assets/4d4e3bbb-23d2-4c66-ad3a-a94ec02f427c" width="300" height="auto" />
+  <img src="https://github.com/user-attachments/assets/29e5abb7-8b0f-47e4-84e2-a072b10346f2" width="300" height="auto" />
+  <img src="https://github.com/user-attachments/assets/6b679ddb-2baa-421a-9e12-4e018d85f8bb" width="300" height="auto" />
 
 ## 🌟 Features
 
