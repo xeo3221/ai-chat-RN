@@ -1,19 +1,17 @@
 import Constants from "expo-constants";
 
 export const generateAPIUrl = (relativePath: string) => {
-  const origin = Constants.experienceUrl.replace("exp://", "http://");
-
   const path = relativePath.startsWith("/") ? relativePath : `/${relativePath}`;
 
+  // In development, use http://
   if (process.env.NODE_ENV === "development") {
-    return origin.concat(path);
+    const localUrl =
+      Constants.experienceUrl?.replace("exp://", "http://") ||
+      "http://localhost:8081";
+    return localUrl + path;
   }
 
-  if (!process.env.EXPO_PUBLIC_API_BASE_URL) {
-    throw new Error(
-      "EXPO_PUBLIC_API_BASE_URL environment variable is not defined"
-    );
-  }
-
-  return process.env.EXPO_PUBLIC_API_BASE_URL.concat(path);
+  // In production (Expo Go), use exp:// format
+  const experienceUrl = Constants.experienceUrl || "exp://localhost:8081";
+  return experienceUrl + path;
 };
