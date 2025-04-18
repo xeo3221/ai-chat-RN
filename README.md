@@ -1,6 +1,6 @@
 # AI Chat
 
-A modern mobile chat application built with React Native, Expo, and Appwrite. The app offers a seamless experience for interacting with AI, featuring a clean and intuitive interface, real-time chat functionality, and robust message management.
+A modern mobile chat application built with React Native, Expo, and Appwrite. The app offers a seamless experience for interacting with AI using AI SDK, featuring a clean and intuitive interface, real-time chat functionality, and robust message management.
 
 <details>
   <summary>Table of Contents</summary>
