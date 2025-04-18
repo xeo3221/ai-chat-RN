@@ -169,7 +169,7 @@ export default function ChatSettings() {
           style={{
             flexDirection: "row",
             alignItems: "center",
-            justifyContent: "space-between",
+            justifyContent: "center",
             backgroundColor: RedSecondary,
             padding: 16,
             borderRadius: 10,
@@ -181,15 +181,6 @@ export default function ChatSettings() {
             <IconSymbol name="trash" color={Red} />
             <Text style={{ color: "red" }}>Delete Chat</Text>
           </View>
-          {isLoading ? (
-            <ActivityIndicator color={Red} />
-          ) : (
-            <IconSymbol
-              name="plus"
-              color={Red}
-              style={{ transform: [{ rotate: "45deg" }] }}
-            />
-          )}
         </Pressable>
       </View>
     </>
