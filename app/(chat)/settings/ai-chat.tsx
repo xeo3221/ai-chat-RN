@@ -185,7 +185,6 @@ export default function AIChatSettings() {
               gap: 8,
             }}
           >
-            <IconSymbol name="trash" color={Red} />
             <Text style={{ color: "red" }}>Delete Chat</Text>
           </View>
         </Pressable>

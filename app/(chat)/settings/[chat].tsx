@@ -178,7 +178,6 @@ export default function ChatSettings() {
           }}
         >
           <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
-            <IconSymbol name="trash" color={Red} />
             <Text style={{ color: "red" }}>Delete Chat</Text>
           </View>
         </Pressable>
