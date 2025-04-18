@@ -4,7 +4,7 @@ A modern mobile chat application built with React Native, Expo, and Appwrite. Th
 
 ## Expo GO Demo
 
-<img src="https://github.com/user-attachments/assets/f252d401-c10e-472b-926d-7e87ee7fc053" width="300" height="auto" />
+<img src="https://github.com/user-attachments/assets/d647289d-76da-4a18-bad5-ce34080117c4" width="300" height="auto" />
 
 <details>
   <summary>Table of Contents</summary>
